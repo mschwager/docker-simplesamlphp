@@ -1,0 +1,33 @@
+version: '3'
+services:
+  nginx:
+    ports:
+    - "80:80"
+    volumes:
+    - "static:/var/simplesamlphp/www/resources/:ro"
+    container_name: nginx
+    restart: always
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+        max-file: "20"
+    build:
+      context: .
+      dockerfile: dockerfiles/nginx.dockerfile
+  phpfpm:
+    volumes:
+    - "static:/var/simplesamlphp/www/resources/:ro"
+    container_name: phpfpm
+    restart: always
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+        max-file: "20"
+    build:
+      context: .
+      dockerfile: dockerfiles/phpfpm.dockerfile
+volumes:
+  static:
+    driver: local
