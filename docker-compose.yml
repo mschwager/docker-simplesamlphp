@@ -6,7 +6,7 @@ services:
     volumes:
     - "static:/var/simplesamlphp/www/resources/:ro"
     container_name: nginx
-    restart: always
+    restart: on-failure
     logging:
       driver: json-file
       options:
@@ -19,7 +19,7 @@ services:
     volumes:
     - "static:/var/simplesamlphp/www/resources/:ro"
     container_name: phpfpm
-    restart: always
+    restart: on-failure
     logging:
       driver: json-file
       options:
