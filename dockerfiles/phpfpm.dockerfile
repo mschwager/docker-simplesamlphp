@@ -18,8 +18,8 @@ RUN apk add --no-cache \
     php7-zlib \
     wget
 
-ENV SIMPLESAMLPHP_VERSION 1.14.17
-ENV SIMPLESAMLPHP_CHECKSUM 4b67333ac210767f11991aa3df519ec371292fc7c3dda3f2ffbdba3162aba850
+ENV SIMPLESAMLPHP_VERSION 1.15.2
+ENV SIMPLESAMLPHP_CHECKSUM c0227e3ad0a1beb2ccca9147d1bd0338a0dfbd4166c06dc063f1f7ce1067bf20
 RUN wget -q https://github.com/simplesamlphp/simplesamlphp/releases/download/v$SIMPLESAMLPHP_VERSION/simplesamlphp-$SIMPLESAMLPHP_VERSION.tar.gz && \
     echo "$SIMPLESAMLPHP_CHECKSUM  simplesamlphp-$SIMPLESAMLPHP_VERSION.tar.gz" | sha256sum -c - && \
     tar -C /var -xz -f simplesamlphp-$SIMPLESAMLPHP_VERSION.tar.gz && \
