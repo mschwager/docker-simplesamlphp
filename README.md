@@ -9,6 +9,7 @@ via [Docker Compose](https://docs.docker.com/compose/) to host SimpleSAMLphp.
 $ git clone https://github.com/mschwager/docker-simplesamlphp.git
 $ cd docker-simplesamlphp
 $ docker-compose build
+$ ./bootstrap.sh
 ```
 
 # Running
@@ -18,3 +19,8 @@ $ docker-compose up
 ```
 
 Then you should be able to visit [http://localhost/simplesaml/index.php](http://localhost/simplesaml/index.php).
+
+# Configuration
+
+Configuration files are persistently stored and made available for editing in
+the `.storage` directory.
