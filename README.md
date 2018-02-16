@@ -1,5 +1,7 @@
 # SimpleSAMLphp using Docker Compose
 
+[![Build Status](https://travis-ci.org/mschwager/docker-simplesamlphp.svg?branch=master)](https://travis-ci.org/mschwager/docker-simplesamlphp)
+
 Run SimpleSAMLphp in Docker containers! This project runs `nginx` and `php-fpm`
 via [Docker Compose](https://docs.docker.com/compose/) to host SimpleSAMLphp.
 
