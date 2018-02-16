@@ -18,6 +18,9 @@ services:
   phpfpm:
     volumes:
     - "static:/var/simplesamlphp/www/resources/:ro"
+    - ".storage/config/:/var/simplesamlphp/config/"
+    - ".storage/metadata/:/var/simplesamlphp/metadata/"
+    - ".storage/cert/:/var/simplesamlphp/cert/"
     container_name: phpfpm
     restart: on-failure
     logging:
