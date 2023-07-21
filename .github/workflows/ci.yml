@@ -1,0 +1,11 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run CI
+        run: |
+          docker-compose build
+          ./bootstrap.sh

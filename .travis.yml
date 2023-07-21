@@ -1,8 +1,0 @@
-language: python
-services:
-    - docker
-python:
-    - 2.7
-script:
-    - docker-compose build
-    - ./bootstrap.sh
