@@ -5,7 +5,7 @@ services:
     - "80:80"
     volumes:
     - "static:/var/simplesamlphp/public/:ro"
-    - "./configuration/nginx.conf:/etc/nginx/nginx.conf:ro"
+    - "./nginx.conf:/etc/nginx/nginx.conf:ro"
     container_name: "nginx"
     image: "nginx:1.25"
   phpfpm:
@@ -17,7 +17,6 @@ services:
     container_name: "phpfpm"
     build:
       context: .
-      dockerfile: dockerfiles/phpfpm.dockerfile
 volumes:
   static:
     driver: local

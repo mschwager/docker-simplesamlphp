@@ -1,6 +1,6 @@
 # SimpleSAMLphp using Docker Compose
 
-[![CI](https://github.com/mschwager/docker-simplesamlphp/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/mschwager/docker-simplesamlphp/actions/workflows/ci.yml)
+[![CI](https://github.com/mschwager/docker-simplesamlphp/actions/workflows/ci.yml/badge.svg)](https://github.com/mschwager/docker-simplesamlphp/actions/workflows/ci.yml)
 
 Run SimpleSAMLphp using `nginx`, `php-fpm`, and Docker Compose.
 
