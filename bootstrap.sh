@@ -11,6 +11,6 @@ tar -xzf simplesamlphp-$SIMPLESAMLPHP_VERSION.tar.gz
 
 mkdir -p .storage/
 
-cp -R simplesamlphp-$SIMPLESAMLPHP_VERSION/config/ .storage/
-cp -R simplesamlphp-$SIMPLESAMLPHP_VERSION/metadata/ .storage/
-cp -R simplesamlphp-$SIMPLESAMLPHP_VERSION/cert/ .storage/
+cp -R simplesamlphp-$SIMPLESAMLPHP_VERSION/config .storage/
+cp -R simplesamlphp-$SIMPLESAMLPHP_VERSION/metadata .storage/
+cp -R simplesamlphp-$SIMPLESAMLPHP_VERSION/cert .storage/
